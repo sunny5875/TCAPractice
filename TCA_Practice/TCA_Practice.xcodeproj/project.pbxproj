@@ -22,6 +22,7 @@
 		D60E5F582BF3419A00B8E753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D60E5F5B2BF3419A00B8E753 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D60E5F652BF341E000B8E753 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		D6D8766A2BF34CDE00B82CF1 /* TCA-Practice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Practice-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +56,12 @@
 		D60E5F532BF3419900B8E753 /* TCA_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				D6D8766A2BF34CDE00B82CF1 /* TCA-Practice-Info.plist */,
 				D60E5F542BF3419900B8E753 /* TCA_PracticeApp.swift */,
-				D60E5F562BF3419900B8E753 /* ContentView.swift */,
+				D6D876692BF34C3800B82CF1 /* View */,
+				D6D876682BF34C3200B82CF1 /* Feature */,
 				D60E5F582BF3419A00B8E753 /* Assets.xcassets */,
 				D60E5F5A2BF3419A00B8E753 /* Preview Content */,
-				D60E5F652BF341E000B8E753 /* CounterFeature.swift */,
 			);
 			path = TCA_Practice;
 			sourceTree = "<group>";
@@ -70,6 +72,22 @@
 				D60E5F5B2BF3419A00B8E753 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D6D876682BF34C3200B82CF1 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				D60E5F652BF341E000B8E753 /* CounterFeature.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		D6D876692BF34C3800B82CF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D60E5F562BF3419900B8E753 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +305,7 @@
 				DEVELOPMENT_TEAM = 2YJXRFH75A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Practice-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +335,7 @@
 				DEVELOPMENT_TEAM = 2YJXRFH75A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Practice-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
