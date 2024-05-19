@@ -10,7 +10,7 @@ import Foundation
 @Reducer // reducer protocol을 구현하는 것을 도와주는 매크로
 struct CounterFeature {
     @ObservableState // feature가 해야하는 state들을 정의, struct, tca에서의 @observable 같은 느낌
-    struct State {
+    struct State: Equatable { // equatable을 준수해야하는 이유는 testStore만들 때 필요하기 때문
         var count = 0
         var fact: String?
         var isLoading = false
@@ -30,6 +30,12 @@ struct CounterFeature {
     // effect cancellation, 타이머 중간에 멈추고 싶은 경우 cancel해주는 방법
     enum CancelID { case timer }
     
+    // test 작성 시 clock dependency를 관리하기 위한 변수
+    @Dependency(\.continuousClock) var clock
+    
+    // network depedency를 관리하기 위한 변수
+    @Dependency(\.numberFact) var numberFact
+    
     // 실질적으로 action에 따라 어떤 state로 변경되는지와 effect를 기술
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -48,10 +54,11 @@ struct CounterFeature {
                 state.fact = nil
                 state.isLoading = true
                 return .run { [count = state.count] send in
-                    let (data, _) = try await URLSession.shared
-                        .data(from: URL(string: "http://numbersapi.com/\(count)")!)
-                    let fact = String(decoding: data, as: UTF8.self)
-                    await send(.factResponse(fact))
+//                    let (data, _) = try await URLSession.shared
+//                        .data(from: URL(string: "http://numbersapi.com/\(count)")!)
+//                    let fact = String(decoding: data, as: UTF8.self)
+//                    await send(.factResponse(fact))
+                    try await send(.factResponse(self.numberFact.fetch(count)))
                 }
             case let .factResponse(fact):
                 state.fact = fact

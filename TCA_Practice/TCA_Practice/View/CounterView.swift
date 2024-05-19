@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CounterView.swift
 //  TCA_Practice
 //
 //  Created by 현수빈 on 5/14/24.
@@ -9,7 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 
-struct ContentView: View {
+struct CounterView: View {
     // store: feature의 런타임을 의미, let으로 선언 가능
     let store: StoreOf<CounterFeature>
     
@@ -66,7 +66,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(
+    CounterView(
         store: Store(initialState: CounterFeature.State()) {
             CounterFeature() // 여기 부분을 주석한다면 다른 버튼의 동작하지 않음. 즉 다른 기능을 하는 같은 UI가 있는 경우 다른 feature만 넣어준다면 가능!
         }

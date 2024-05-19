@@ -8,20 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		D60E5F552BF3419900B8E753 /* TCA_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E5F542BF3419900B8E753 /* TCA_PracticeApp.swift */; };
-		D60E5F572BF3419900B8E753 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E5F562BF3419900B8E753 /* ContentView.swift */; };
+		D60E5F572BF3419900B8E753 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E5F562BF3419900B8E753 /* CounterView.swift */; };
 		D60E5F592BF3419A00B8E753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60E5F582BF3419A00B8E753 /* Assets.xcassets */; };
 		D60E5F5C2BF3419A00B8E753 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60E5F5B2BF3419A00B8E753 /* Preview Assets.xcassets */; };
 		D60E5F642BF341D600B8E753 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D60E5F632BF341D600B8E753 /* ComposableArchitecture */; };
 		D60E5F662BF341E000B8E753 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E5F652BF341E000B8E753 /* CounterFeature.swift */; };
+		D6769E102BF9CE2D00DC65BC /* CounterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6769E0F2BF9CE2D00DC65BC /* CounterTestCase.swift */; };
+		D6769E192BF9DA0A00DC65BC /* TimerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6769E182BF9DA0A00DC65BC /* TimerTestCase.swift */; };
+		D6769E1B2BF9DA4A00DC65BC /* NetworkTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6769E1A2BF9DA4A00DC65BC /* NetworkTestCase.swift */; };
+		D6769E1D2BF9DB0300DC65BC /* NumberFactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6769E1C2BF9DB0300DC65BC /* NumberFactClient.swift */; };
+		D6769E202BF9DD9200DC65BC /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6769E1F2BF9DD9200DC65BC /* AppView.swift */; };
+		D6769E222BF9DDC700DC65BC /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6769E212BF9DDC700DC65BC /* AppFeature.swift */; };
+		D6769E242BF9DE6E00DC65BC /* AppFeatureTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6769E232BF9DE6E00DC65BC /* AppFeatureTestCase.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6769E112BF9CE2D00DC65BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D60E5F492BF3419900B8E753 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D60E5F502BF3419900B8E753;
+			remoteInfo = TCA_Practice;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D60E5F512BF3419900B8E753 /* TCA_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60E5F542BF3419900B8E753 /* TCA_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_PracticeApp.swift; sourceTree = "<group>"; };
-		D60E5F562BF3419900B8E753 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D60E5F562BF3419900B8E753 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		D60E5F582BF3419A00B8E753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D60E5F5B2BF3419A00B8E753 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D60E5F652BF341E000B8E753 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		D6769E0D2BF9CE2D00DC65BC /* TCA_PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCA_PracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6769E0F2BF9CE2D00DC65BC /* CounterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTestCase.swift; sourceTree = "<group>"; };
+		D6769E182BF9DA0A00DC65BC /* TimerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTestCase.swift; sourceTree = "<group>"; };
+		D6769E1A2BF9DA4A00DC65BC /* NetworkTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTestCase.swift; sourceTree = "<group>"; };
+		D6769E1C2BF9DB0300DC65BC /* NumberFactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactClient.swift; sourceTree = "<group>"; };
+		D6769E1F2BF9DD9200DC65BC /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		D6769E212BF9DDC700DC65BC /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
+		D6769E232BF9DE6E00DC65BC /* AppFeatureTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeatureTestCase.swift; sourceTree = "<group>"; };
 		D6D8766A2BF34CDE00B82CF1 /* TCA-Practice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Practice-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -34,6 +59,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6769E0A2BF9CE2D00DC65BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				D60E5F532BF3419900B8E753 /* TCA_Practice */,
+				D6769E0E2BF9CE2D00DC65BC /* TCA_PracticeTests */,
 				D60E5F522BF3419900B8E753 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				D60E5F512BF3419900B8E753 /* TCA_Practice.app */,
+				D6769E0D2BF9CE2D00DC65BC /* TCA_PracticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,10 +108,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D6769E0E2BF9CE2D00DC65BC /* TCA_PracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6769E0F2BF9CE2D00DC65BC /* CounterTestCase.swift */,
+				D6769E182BF9DA0A00DC65BC /* TimerTestCase.swift */,
+				D6769E1A2BF9DA4A00DC65BC /* NetworkTestCase.swift */,
+				D6769E232BF9DE6E00DC65BC /* AppFeatureTestCase.swift */,
+			);
+			path = TCA_PracticeTests;
+			sourceTree = "<group>";
+		};
+		D6769E1E2BF9DB0700DC65BC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D6769E1C2BF9DB0300DC65BC /* NumberFactClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		D6D876682BF34C3200B82CF1 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				D6769E1E2BF9DB0700DC65BC /* Network */,
 				D60E5F652BF341E000B8E753 /* CounterFeature.swift */,
+				D6769E212BF9DDC700DC65BC /* AppFeature.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -85,7 +140,8 @@
 		D6D876692BF34C3800B82CF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D60E5F562BF3419900B8E753 /* ContentView.swift */,
+				D60E5F562BF3419900B8E753 /* CounterView.swift */,
+				D6769E1F2BF9DD9200DC65BC /* AppView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +169,24 @@
 			productReference = D60E5F512BF3419900B8E753 /* TCA_Practice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D6769E0C2BF9CE2D00DC65BC /* TCA_PracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6769E152BF9CE2D00DC65BC /* Build configuration list for PBXNativeTarget "TCA_PracticeTests" */;
+			buildPhases = (
+				D6769E092BF9CE2D00DC65BC /* Sources */,
+				D6769E0A2BF9CE2D00DC65BC /* Frameworks */,
+				D6769E0B2BF9CE2D00DC65BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6769E122BF9CE2D00DC65BC /* PBXTargetDependency */,
+			);
+			name = TCA_PracticeTests;
+			productName = TCA_PracticeTests;
+			productReference = D6769E0D2BF9CE2D00DC65BC /* TCA_PracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,6 +199,10 @@
 				TargetAttributes = {
 					D60E5F502BF3419900B8E753 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					D6769E0C2BF9CE2D00DC65BC = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = D60E5F502BF3419900B8E753;
 					};
 				};
 			};
@@ -145,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				D60E5F502BF3419900B8E753 /* TCA_Practice */,
+				D6769E0C2BF9CE2D00DC65BC /* TCA_PracticeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +238,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6769E0B2BF9CE2D00DC65BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -166,13 +252,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6769E222BF9DDC700DC65BC /* AppFeature.swift in Sources */,
+				D6769E202BF9DD9200DC65BC /* AppView.swift in Sources */,
 				D60E5F662BF341E000B8E753 /* CounterFeature.swift in Sources */,
-				D60E5F572BF3419900B8E753 /* ContentView.swift in Sources */,
+				D60E5F572BF3419900B8E753 /* CounterView.swift in Sources */,
 				D60E5F552BF3419900B8E753 /* TCA_PracticeApp.swift in Sources */,
+				D6769E1D2BF9DB0300DC65BC /* NumberFactClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6769E092BF9CE2D00DC65BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6769E242BF9DE6E00DC65BC /* AppFeatureTestCase.swift in Sources */,
+				D6769E102BF9CE2D00DC65BC /* CounterTestCase.swift in Sources */,
+				D6769E1B2BF9DA4A00DC65BC /* NetworkTestCase.swift in Sources */,
+				D6769E192BF9DA0A00DC65BC /* TimerTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6769E122BF9CE2D00DC65BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D60E5F502BF3419900B8E753 /* TCA_Practice */;
+			targetProxy = D6769E112BF9CE2D00DC65BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D60E5F5D2BF3419A00B8E753 /* Debug */ = {
@@ -354,6 +462,42 @@
 			};
 			name = Release;
 		};
+		D6769E132BF9CE2D00DC65BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YJXRFH75A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sunny.TCA-PracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA_Practice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA_Practice";
+			};
+			name = Debug;
+		};
+		D6769E142BF9CE2D00DC65BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YJXRFH75A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sunny.TCA-PracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA_Practice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA_Practice";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -371,6 +515,15 @@
 			buildConfigurations = (
 				D60E5F602BF3419A00B8E753 /* Debug */,
 				D60E5F612BF3419A00B8E753 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6769E152BF9CE2D00DC65BC /* Build configuration list for PBXNativeTarget "TCA_PracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6769E132BF9CE2D00DC65BC /* Debug */,
+				D6769E142BF9CE2D00DC65BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
