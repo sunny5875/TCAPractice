@@ -15,7 +15,16 @@ struct ContactView: View {
     NavigationStack {
       List {
         ForEach(store.contacts) { contact in
-          Text(contact.name)
+            HStack {
+                Text(contact.name)
+                Spacer()
+                Button {
+                    store.send(.deleteButtonTapped(id: contact.id))
+                } label: {
+                    Image(systemName: "trash")
+                        .foregroundColor(.red)
+                }
+            }
         }
       }
       .navigationTitle("Contacts")
@@ -30,9 +39,10 @@ struct ContactView: View {
       }
     }
     .sheet( // addContact의 state가 nil이 아니라면 AddContactFEature에 초점을 둔 store가 생성
-        item: $store.scope(state: \.addContact, action: \.addContact),
+        item: $store.scope(state: \.destination?.addContact, action: \.destination.addContact),
         content: { addContactStore in
             AddContactView(store: addContactStore)
         })
+    .alert($store.scope(state: \.destination?.alert, action: \.destination.alert))
   }
 }
