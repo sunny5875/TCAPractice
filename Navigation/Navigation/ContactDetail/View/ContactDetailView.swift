@@ -14,6 +14,14 @@ struct ContactDetailView: View {
     
     var body: some View {
         Form {
+            TextField(
+                store.contact.name,
+                text: $store.newName.sending(\.setName)
+            )
+            
+            Button("Update") {
+                store.send(.updateButtonTapped)
+            }
             Button("Delete") {
                 store.send(.deleteButtonTapped)
             }

@@ -16,6 +16,7 @@ struct ContactDetailFeature {
     struct State: Equatable {
         let contact: Contact
         
+        var newName: String = ""
         @Presents var alert: AlertState<Action.Alert>?
     }
     
@@ -26,10 +27,15 @@ struct ContactDetailFeature {
         
         enum Alert {
             case confirmDeletion
+            case confirmUpdate
         }
         enum Delegate {
             case confirmDeletion
+            case confirmUpdate
         }
+        
+        case setName(String)
+        case updateButtonTapped
     }
     
     @Dependency(\.dismiss) var dismiss
@@ -48,23 +54,45 @@ struct ContactDetailFeature {
                     await send(.delegate(.confirmDeletion))
                     await self.dismiss()
                 }
+            case .alert(.presented(.confirmUpdate)):
+                return .run { send in
+                    await send(.delegate(.confirmUpdate))
+                    await self.dismiss()
+                }
+                
             case .alert:
                 return .none
                 
             case .delegate:
                 return .none
                 
+                
+            case let .setName(name):
+                state.newName = name
+                return .none
+                
+            case .updateButtonTapped:
+                state.alert = .confirmUpdate
+                return .none
             }
         }.ifLet(\.$alert, action: \.alert)
     }
 }
 
 extension AlertState where Action == ContactDetailFeature.Action.Alert {
-  static let confirmDeletion = Self {
-    TextState("Are you sure?")
-  } actions: {
-    ButtonState(role: .destructive, action: .confirmDeletion) {
-      TextState("Delete")
+    static let confirmDeletion = Self {
+        TextState("Are you sure?")
+    } actions: {
+        ButtonState(role: .destructive, action: .confirmDeletion) {
+            TextState("Delete")
+        }
     }
-  }
+    
+    static let confirmUpdate = Self {
+        TextState("Are you sure?")
+    } actions: {
+        ButtonState(role: .destructive, action: .confirmUpdate) {
+            TextState("Update")
+        }
+    }
 }

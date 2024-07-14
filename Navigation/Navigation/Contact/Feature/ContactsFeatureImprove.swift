@@ -73,6 +73,16 @@ struct ContactsFeature {
                 else { return .none }
                 state.contacts.remove(id: detailState.contact.id)
                 return .none
+                
+            case let .path(.element(id: id, action: .delegate(.confirmUpdate))):
+                guard let detailState = state.path[id: id]
+                else { return .none }
+                let newItem = Contact(
+                    id: detailState.contact.id,
+                    name: detailState.newName
+                )
+                state.contacts.updateOrAppend(newItem)
+                return .none
             case .path:
                 return .none
             }
