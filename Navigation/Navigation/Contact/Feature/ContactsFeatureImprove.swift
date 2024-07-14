@@ -26,6 +26,8 @@ struct ContactsFeature {
     struct State: Equatable {
         var contacts: IdentifiedArrayOf<Contact> = []
         @Presents var destination: Destination.State?
+        
+        var path = StackState<ContactDetailFeature.State>()
     }
     
     enum Action {
@@ -35,6 +37,8 @@ struct ContactsFeature {
         enum Alert: Equatable {
             case confirmDeletion(id: Contact.ID)
         }
+        
+        case path(StackActionOf<ContactDetailFeature>)
     }
     
     @Dependency(\.uuid) var uuid // 자동생성되는 uuid기에 test에서 제대로 expect할 수 없기 때문
@@ -57,15 +61,25 @@ struct ContactsFeature {
             case let .destination(.presented(.alert(.confirmDeletion(id: id)))):
                 state.contacts.remove(id: id)
                 return .none
-                
             case .destination:
                 return .none
                 
             case let .deleteButtonTapped(id: id):
                 state.destination = .alert(.deleteConfirmation(id: id))
                 return .none
+                
+            case let .path(.element(id: id, action: .delegate(.confirmDeletion))):
+                guard let detailState = state.path[id: id]
+                else { return .none }
+                state.contacts.remove(id: detailState.contact.id)
+                return .none
+            case .path:
+                return .none
             }
         }
         .ifLet(\.$destination, action: \.destination)
+        .forEach(\.path, action: \.path) { // 여기서 path에 따라 자식 feature 할당
+            ContactDetailFeature()
+        }
     }
 }

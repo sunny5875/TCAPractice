@@ -21,6 +21,8 @@
 		D6E6F9FD2C438CC100BCDFD0 /* ContactFeatureTextIImprove.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6F9FC2C438CC100BCDFD0 /* ContactFeatureTextIImprove.swift */; };
 		D6E6F9FF2C438FB700BCDFD0 /* DeleteContactFeatureText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6F9FE2C438FB700BCDFD0 /* DeleteContactFeatureText.swift */; };
 		D6E6FA022C43911100BCDFD0 /* ContactsFeature+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6FA002C4390FC00BCDFD0 /* ContactsFeature+Alert.swift */; };
+		D6E6FA052C43AE6D00BCDFD0 /* ContactDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6FA042C43AE6D00BCDFD0 /* ContactDetailFeature.swift */; };
+		D6E6FA092C43AE8500BCDFD0 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E6FA082C43AE8500BCDFD0 /* ContactDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		D6E6F9FC2C438CC100BCDFD0 /* ContactFeatureTextIImprove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFeatureTextIImprove.swift; sourceTree = "<group>"; };
 		D6E6F9FE2C438FB700BCDFD0 /* DeleteContactFeatureText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteContactFeatureText.swift; sourceTree = "<group>"; };
 		D6E6FA002C4390FC00BCDFD0 /* ContactsFeature+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactsFeature+Alert.swift"; sourceTree = "<group>"; };
+		D6E6FA042C43AE6D00BCDFD0 /* ContactDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFeature.swift; sourceTree = "<group>"; };
+		D6E6FA082C43AE8500BCDFD0 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		D61F05552C426E0E00F538E2 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				D6E6FA032C43AE5600BCDFD0 /* ContactDetail */,
 				D61F05712C42723800F538E2 /* Contact */,
 				D61F05722C42724000F538E2 /* AddContact */,
 				D61F05562C426E0E00F538E2 /* NavigationApp.swift */,
@@ -179,6 +184,31 @@
 				D6E6F9FE2C438FB700BCDFD0 /* DeleteContactFeatureText.swift */,
 			);
 			path = NavigationTests;
+			sourceTree = "<group>";
+		};
+		D6E6FA032C43AE5600BCDFD0 /* ContactDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D6E6FA072C43AE7600BCDFD0 /* View */,
+				D6E6FA062C43AE7000BCDFD0 /* Feature */,
+			);
+			path = ContactDetail;
+			sourceTree = "<group>";
+		};
+		D6E6FA062C43AE7000BCDFD0 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				D6E6FA042C43AE6D00BCDFD0 /* ContactDetailFeature.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		D6E6FA072C43AE7600BCDFD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6E6FA082C43AE8500BCDFD0 /* ContactDetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +321,8 @@
 				D61F05762C42744400F538E2 /* ContactView.swift in Sources */,
 				D61F05702C42704E00F538E2 /* AddContactFeature.swift in Sources */,
 				D61F05592C426E0E00F538E2 /* AddContactView.swift in Sources */,
+				D6E6FA092C43AE8500BCDFD0 /* ContactDetailView.swift in Sources */,
+				D6E6FA052C43AE6D00BCDFD0 /* ContactDetailFeature.swift in Sources */,
 				D61F057B2C42ABE400F538E2 /* ContactsFeatureImprove.swift in Sources */,
 				D61F05572C426E0E00F538E2 /* NavigationApp.swift in Sources */,
 				D61F05662C426E3C00F538E2 /* ContactsFeature.swift in Sources */,
