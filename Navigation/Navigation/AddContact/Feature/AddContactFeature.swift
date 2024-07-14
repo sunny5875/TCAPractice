@@ -22,6 +22,8 @@ struct AddContactFeature {
         
         // child가 parent에게 원하는 작업을 직접 말하는 방식 으로 바꿔보자!!
         case delegate(Delegate)
+        
+        @CasePathable // enum을 keypath로 접근하기 위한 매크로
         enum Delegate: Equatable {
 //            case cancel <- dismiss를 직접 가지고 있게 되면서 필요없게 됨
             case saveContact(Contact)
