@@ -19,15 +19,16 @@ struct ContactView: View {
                 HStack {
                     Text(contact.name)
                     Spacer()
-                    Button {
+                }
+                .swipeActions(edge: .trailing) {
+                    Button(role: .destructive) {
                         store.send(.deleteButtonTapped(id: contact.id))
                     } label: {
-                        Image(systemName: "trash")
-                            .foregroundColor(.red)
+                        Label("Trash", systemImage: "trash.circle")
                     }
+                    .tint(.red)
                 }
             }
-//            .buttonStyle(.borderless)
         }
       }
       .navigationTitle("Contacts")
